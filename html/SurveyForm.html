@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/SurveyForm.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Train+One&display=swap" rel="stylesheet"> 
+    <title>Survey Form</title>
+</head>
+<body>
+<div class="container">
+    <h1 id="title">Camp Survey Form <br> <span>Thanks for taking your time to help improve us</span></h1>
+    <hr>
+    <form action="" id="survey-form">
+        <div class="form-group">
+            <label for="name" id="name-label">Name: </label>
+            <input type="text" name="" id="name" placeholder="Enter your name" required="">
+        </div>
+        <div class="form-group">
+            <label for="email" id="email-label">Email: </label>
+            <input type="text" name="" id="email" placeholder="Enter your email" required="">
+        </div>
+        <div class="form-group">
+            <label for="email" id="age-label">Age: (optional)</label>
+            <input type="number" name="" id="age" placeholder="Enter your age" min="12" max="99">
+        </div>
+        <div class="form-group">
+            <p>What is your current occupation.</p>
+            <select name="" id="dropdown" class="form-control" required="">
+                <option value="" disabled="" selected="">Select your option</option>
+                <option value="Student">Student</option>
+                <option value="Private-Job">Private Job</option>
+                <option value="Govt-Job">Govt. Job</option>
+                <option value="Professor">Professor</option>
+                <option value="PrefferNo">Preffer Not to Say</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+       <div class="form-group">
+           <p>Would you like to recommend changes to my page.</p>
+           <label for="yes">
+               <input type="radio" id="yes" value="yes" class="input-radio" name="radio">Yes 
+            </label>
+           <label for="no">
+               <input type="radio" id="no" value="no" class="input-radio" name="radio">No
+           </label>
+           <label for="maybe">
+               <input type="radio" id="maybe" value="maybe" class="input-radio" name="radio">Maybe
+           </label>
+       </div>
+       <div class="form-group">
+           <p class="hobby">What is your hobby.</p>
+           <label for="">
+               <select name="" id="dropdown" class="form-control" required="">
+                   <option value="" selected="">Select your option</option>
+                   <option value="Cricket">Cricket</option>
+                   <option value="BaseBall">BaseBall</option>
+                   <option value="BasketBall">BasketBall</option>
+                   <option value="FootBall">FootBall</option>
+                   <option value="VolleyBall">VolleyBall</option>
+               </select>
+           </label>
+       </div>
+       <div class="form-group">
+           <p>What is your favourite feature of coding</p>
+           <label>
+               <input type="checkbox" value="Front-End">Front-End
+           </label>
+           <label>
+               <input type="checkbox" value="Back-End">Back-End
+           </label>
+           <label>
+               <input type="checkbox" value="Data-Visualization">Data Visualization
+           </label>
+           <label>
+               <input type="checkbox" value="Challenges">Challenges
+           </label>
+           <label>
+               <input type="checkbox" value="Projects">Projects
+           </label>
+           <label>
+               <input type="checkbox" value="OpenSource">Open Course Community
+           </label>
+       </div>
+       <div class="form-group">
+           <p id="suggestion">Any More Suggestion</p>
+          <textarea name="comment" id="comments" placeholder="Enter your comment here..."></textarea>
+       </div>
+       <div class="form-group">
+           <button type="submit" name="submit" id="submit">Submit</button>
+       </div>
+    </form>
+</div>
+</body>
+</html>

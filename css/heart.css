@@ -1,0 +1,62 @@
+body{
+  background: black;
+}
+
+.back{
+  position: fixed;
+  margin: 0;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.heart {
+    position: absolute;
+    margin: auto;
+    top: 0;     /*only cz of these heart stays in the middle */
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(240, 72, 72);
+    height: 50px;
+    width: 50px;
+    transform: rotate(-45deg);
+    animation-name: beat;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+
+  .heart::after {
+    background-color: rgb(240, 72, 72);
+    content: ""; /*This is the most imp line*/
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0px;
+    left: 25px;
+  }
+
+  .heart::before {
+    content: "";
+    background-color: rgb(240, 72, 72);
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    left: 0px; /*Left -25px wont work cz it will put it below the ::after left 25*/
+  }
+
+  @keyframes beat{
+    0%{
+    transform: scale(1) rotate(-45deg);
+    }
+    50%{
+    transform: scale(0.82) rotate(-45deg); 
+    opacity: 50%;
+    filter: blur(2px);
+    }
+  }

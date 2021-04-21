@@ -1,0 +1,36 @@
+*{
+     box-sizing: border-box;
+     padding: 0;
+     margin: 0;
+}
+
+body{
+     background: url(/images/Cross.png);
+     background-size: cover;
+     background-position: center;
+}
+
+.container{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+}
+
+.cross{
+     position: relative;
+     width: 20px;
+     height: 100px;
+     transform: rotate(-45deg);
+     background: red;
+}
+
+.cross::before{
+     top: 40px;
+     left: -40px;
+     position: absolute;
+     content: "";
+     width: 100px;
+     height: 20px;
+     background: red;
+}

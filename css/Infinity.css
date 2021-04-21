@@ -1,0 +1,31 @@
+body{
+     background: pink;
+}
+
+.infinity{
+     position: relative;
+     display: flex;
+     justify-content: center;
+}
+
+.infinity::before{
+     position: absolute;
+     content: "";
+     border: 15px solid black;
+     border-radius: 50% 50% 50% 0;
+     width: 120px;
+     height: 120px;
+     transform: rotate(45deg);
+}
+
+.infinity::after{
+     position: absolute;
+     content: "";
+     border: 15px solid black;
+     border-radius: 50% 0 50% 50%;
+     width: 120px;
+     height: 120px;
+     transform: rotate(45deg);
+     left: 680px;
+}
+

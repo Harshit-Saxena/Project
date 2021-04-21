@@ -1,0 +1,48 @@
+body{
+    background-color: skyblue;
+}
+:is(h1,h2){
+    text-align: center;
+}
+h2 a:hover{
+    color: red;
+}
+span{
+    font-style: italic;
+    font-weight: 600;
+    color: black;
+}
+.card1{
+    box-shadow: 0px 2px 2px 2px black;
+    width: 700px;
+    height: 500px;
+    display: flex;
+    background-color: white;
+    flex-wrap: wrap;
+    color: red;
+    flex-direction: row;
+    font-size: 28px;
+    float: left;
+    justify-content: center;
+    margin: 25px;
+}
+.card2{
+    box-shadow: 0px 2px 2px 2px black;
+    width: 700px;
+    height: 500px;
+    display: flex;
+    background-color: white;
+    flex-wrap: wrap;
+    color: red;
+    flex-direction: row;
+    font-size: 28px;
+    float: right;
+    justify-content: center;
+    margin: 25px;
+}
+:is(.card1,.card2):hover{
+    box-shadow: 2px 4px 4px 4px;
+}
+h1:hover{
+    color:green;
+}

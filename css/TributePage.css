@@ -1,0 +1,60 @@
+body{
+    background-color: gainsboro;
+}
+h1{
+    font-size: 50px;
+    text-align: center;
+}
+h3,h2{
+    text-align: center;
+}
+#img-div{
+    background-color: rgb(255, 255, 255);
+    height: 500px;
+    align-items: center;
+}
+#img-caption{
+    font-size: 25px;
+    text-align: center;
+}
+#img{
+    display: block;
+    max-width: 100%; /*Always put width and height in '%' to make the site reponsive...defining them in px makes them fixed*/
+    height: 80%;
+    margin: 0 auto;
+    padding-top: 2px;
+}
+ul{
+    max-width: 550px;
+    line-height: 1.5em;
+    margin: 0 auto 50px auto;
+    list-style-type: '\1F449'; /* This allows us to set anythng as bullet pointers*/
+}
+li{
+    padding-left: 1.25rem;  
+    padding-bottom: 0.5rem;  
+}
+#tribute-info{
+    text-align: justify;
+    font-size: 18px;
+}
+#quote{
+    font-family: 'Roboto','Zilla Slab Highlight';
+    font-size: 22px;
+    font-weight: 500;
+    text-align: justify;
+    margin: 16px auto 16px auto;
+    max-width: 550px;
+}
+#tribute-link{
+    font-size: 22px;
+    text-align: center;
+    margin: 25px 0;
+}
+hr{
+    width: 30%;
+    color: dodgerblue;
+}
+a:hover{
+    color: orangered;
+}

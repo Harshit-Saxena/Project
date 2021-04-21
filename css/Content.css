@@ -1,0 +1,42 @@
+:root{
+    --gradient: linear-gradient(
+        45deg,
+        #845ec2,
+        #d65db1,
+        #ff6f91,
+        #ff9671,
+        #ffc75f,
+        #f9f871,
+        #f5970b
+    );
+}
+
+body{
+    background-image: var(--gradient);
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: rgb(0, 0, 0);
+}
+
+h1{
+    font-size: 40px;
+    font-family: sans-serif;
+}
+
+h1:hover{
+    cursor: pointer;
+    content: '';
+    color: black;
+}
+
+h1:hover:before{
+    content: '< ';
+    color: red;
+}
+
+h1:hover:after{
+    content: ' / >';
+    color: red;
+}

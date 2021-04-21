@@ -1,0 +1,17 @@
+* {box-sizing: border-box;} /*Wht is this ?????*/
+body{
+    margin: 0;
+}
+.parent{
+    background-color: cornflowerblue;
+    padding: 4em;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.child{
+    background-color: aquamarine;
+    padding: 1em;
+    width: 60%;
+    overflow: hidden;
+}

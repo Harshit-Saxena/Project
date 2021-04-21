@@ -1,0 +1,139 @@
+*{
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header{
+     color: white;
+     background: #03a9f4;
+     position: relative;
+     top: 0;
+     left: 0;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+
+header .logo{
+     text-transform: uppercase;
+     text-decoration: none;
+     color: white;
+     font-size: 3em;
+     margin-top: 20px;
+     margin-left: 15px;
+     font-weight: 900;
+}
+
+.navbar{
+     background: #03a9f4;
+     display: flex;
+     justify-content: flex-end;
+     z-index: 1;
+}
+
+.nav__list{
+     display: flex;
+     margin-right: 25px;
+     list-style-type: none;
+}
+
+.nav__items{
+     margin-left: 50px;
+     margin-top: 25px;
+}
+
+.nav__links{
+     text-transform: uppercase;
+     text-decoration: none;
+     color: white;
+     font-size: 19px;
+}
+
+.nav__links:hover{
+     padding: 0.85em;
+     margin-bottom: 1em;
+     color: black;
+     background: white;
+     border-radius: 100px;
+}
+
+.sec{
+     position: relative;
+     width: 100%;
+     height: 100vh;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     background: linear-gradient(#03A9F4,#E91E63);
+     overflow: hidden;
+}
+
+.custom-shape-divider-bottom-1618902711 {
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     overflow: hidden;
+     line-height: 0;
+     transform: rotate(180deg);
+ }
+ 
+ .custom-shape-divider-bottom-1618902711 svg {
+     position: relative;
+     display: block;
+     width: calc(125% + 1.3px);
+     height: 265px;
+ }
+ 
+ .custom-shape-divider-bottom-1618902711 .shape-fill {
+     fill: #FFFFFF;
+}
+
+.content{
+     max-width: 700px;
+     position: relative;
+     margin-left: 55px;
+     bottom: 150px;
+     z-index: 1;
+}
+
+.content h2{
+     color: white;
+     font-size: 7em;
+     line-height: 1em;
+}
+
+.content span{
+     font-size: 0.7em;
+}
+
+.content p{
+     color: white;
+     font-size: 1.25em;
+     margin: 30px 0;
+}
+
+.content a{
+     text-decoration: none;
+     text-transform: uppercase;
+     color: white;
+     padding: 0.85em 0;
+     font-size: 1em;
+}
+
+.content a:hover{
+     background: white;
+     border-radius: 100px;
+     color: black;
+     opacity: 0.5em;
+     padding: 0.75em;
+}
+
+.girl{
+     height: 100%;
+     position: absolute;
+     bottom: 0;
+     right: 100px;
+}

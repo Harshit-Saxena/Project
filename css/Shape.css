@@ -1,0 +1,58 @@
+body{
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+     background: url(/images/Layer.png);
+     background-size: cover;
+     background-position: center;
+}
+
+section{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     min-height: 100vh;
+}
+
+#text{
+     border: 1px solid black;
+     width: 20%;
+     padding-left: 5px;
+     margin-top: 5px;
+     margin-left: 5px;
+}
+#id{
+     border: 1px solid black;
+     width: 50%;
+     padding-left: 5px;
+     margin-top: 5px;
+     margin-left: 5px;
+}
+
+.shape{
+     min-height: 20vh;
+     width: 350px;
+     margin: 0 auto;
+     background: rgba(230, 228, 228, 0.3);
+     clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+     color: rgb(255, 255, 255);
+}
+
+#sam{
+     font-family: Arial, Helvetica, sans-serif;
+     color: blueviolet;
+}
+
+.shape span{
+     font-size: 1.125rem;
+}
+
+#you{
+     display: flex;
+     float: right;
+     border: 1px solid black;
+     padding: 5px;
+     margin-right: 5px;
+     margin-top: 10px;
+}

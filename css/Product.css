@@ -1,0 +1,204 @@
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background: #eee;
+}
+
+img{
+    width: 12em;
+    height: 8em;
+}
+
+.container1{
+    min-height: 75px;
+    top: 0;
+    display: flex;
+    position: fixed; /* This makes the top bar fixed and if uh scroll it will not move and still be able to see it */
+    padding: 0px 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.logo{
+    color: rgb(255, 153, 0);
+    font-weight: 900;
+}
+
+.logo:hover{
+    color: orangered;
+    transition: all 0.5s ease;
+}
+
+#navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-weight: 500;
+    width: 100%;
+}
+
+li{
+    list-style: none;
+}
+
+ul{
+    width: 30vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+a{
+    font-size: 1.125em;
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: dodgerblue;
+    text-decoration: underline;
+}
+
+.container2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px;
+    margin-top: 40px;
+}
+
+input{
+    max-width: 275px;
+    width: 100%;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+button{
+    border: 0;
+    font-size: 18px;
+    width: 9em;
+    height: 32px;
+    margin: 0.55rem;
+    background: rgb(255, 153, 0);
+    color: white;
+    text-transform: uppercase;
+}
+
+button:hover{
+    background: orangered;
+    transition: all 0.5s ease;
+}
+
+.container3{
+    max-width: 850px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+}
+
+.materials{
+    display: flex;
+}
+
+.icon{
+    display: flex;
+    flex-direction: row;
+    padding-right: 4rem;
+    padding-left: 2rem;
+    align-items: center;
+    justify-content: center;
+    color: darkorange;
+
+}
+
+.features > h2{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.features > p{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.feature{
+    display: flex;
+    flex-direction: column;
+    padding-right: 5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.container4{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+iframe{
+    width: 550px;
+    height: 450px;
+}
+
+.container5{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 60px;
+}
+
+.box1{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    align-items: center;
+    text-align: center;
+    width: calc(100%/3);
+    margin: 10px;
+    color: black;
+    border-radius: 3px;
+}
+
+ol{
+    margin: 15px 0;
+}
+
+li{
+    padding: 5px 0;
+}
+
+.title{
+    background-color: #ddd;
+    color: black;
+    padding: 15px 0;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 600;  
+}
+
+footer{
+    margin: 20px;
+    padding: 15px;
+}
+
+footer > ul > li{
+    padding: 0 10px;
+}
+
+#list{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer > p{
+    font-size: 1.125em;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}

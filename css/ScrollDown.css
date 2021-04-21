@@ -1,0 +1,112 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 35px;
+    font-family: monospace;
+    font-weight: 600;
+    scroll-behavior: smooth;
+}
+
+section{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+#sec1{
+    background: orange;
+}
+
+#sec2{
+    background: dodgerblue;
+    transform: rotate(360deg);
+}
+
+.scroll-down{
+    background: white;
+    height: 55px;
+    width: 35px;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    border: 2px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.scroll-up{
+    background: white;
+    height: 55px;
+    width: 35px;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    border: 2px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: rotate(180deg);
+}
+
+.scroll-down::before, 
+.scroll-down::after{
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%, -100%) rotate(45deg);
+    border: 2px solid black;
+    border-top: transparent;
+    border-left: transparent;
+    animation: scroll-down 1s ease-in-out infinite;
+}
+
+.scroll-down::before{
+    top: 30%;
+    animation-delay: 0.3s;
+}
+.scroll-up::before, 
+.scroll-up::after{
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%, -100%) rotate(45deg);
+    border: 2px solid black;
+    border-top: transparent;
+    border-left: transparent;
+    animation: scroll-down 1s ease-in-out infinite;
+}
+
+.scroll-up::before{
+    top: 30%;
+    animation-delay: 0.3s;
+}
+
+@keyframes scroll-down{
+    0%{
+        opacity: 0;
+    }
+
+    30%{
+        opacity: 1;
+    }
+
+    60%{
+        opacity: 1;
+    }
+
+    100%{
+        top: 90%;
+        opacity: 0;
+    }
+}

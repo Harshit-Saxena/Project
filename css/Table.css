@@ -1,0 +1,28 @@
+body{
+     display: flex;
+     top: 0;
+     left: 0;
+     justify-content: center;
+     align-items: center;
+     margin: 0 auto;
+}
+
+#one{
+     background-color: red;
+}
+
+#two{
+     background-color: yellow;
+}
+
+#three{
+     background-color: rgb(8, 190, 8);
+}
+
+#four{
+     background-color: blue;
+}
+
+#five{
+     background-color: yellow;
+}

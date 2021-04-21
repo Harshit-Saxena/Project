@@ -1,0 +1,33 @@
+body{
+     margin: 0;
+     padding: 0;
+     font-family: Arial, Helvetica, sans-serif;
+}
+
+.curved{
+     background: orangered;
+     color: white;
+     text-align: center;
+     min-height: 10vh;
+     width: 100%;
+}
+
+.curved h1{
+     font-size: 2rem;
+     margin: 0 auto;
+     width: 80%;
+}
+
+.curved p{
+     font-size: 1.25rem;
+     margin: 0 auto;
+     width: 80%;
+}
+
+.curved svg{             /* Without this the line at the end doesnt go away and we need to decrease 1 viewport like 319 from 320   */
+     display: block;
+}
+
+.curveupper{            /* This makes the upper curve visible cz its clr is orangered as center and bg white makes it look like its curved at top.. Without this it just fills the whole top area*/
+     background: white;
+}

@@ -1,0 +1,122 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: Roboto Regular;
+    font-size: 1.25rem;
+}
+
+header{
+    color: white;
+    background: #23424A;
+    padding: 1.2em;
+}
+
+.list{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav__item{
+    color: white;
+    margin-right: 1.5em;
+}
+
+.nav__link,.nav__link1{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+}
+
+.nav__link1{
+    margin-left: 10em;
+}
+
+.nav__link4{
+    background: white;
+    color: #23424A;
+    border-radius: 100px;
+    padding: 0.5em;
+}
+
+.nav__item:hover{
+    opacity: 0.7;
+}
+
+.img{
+    max-width: 100%;
+}
+
+.container1{
+    border: 1px solid #23424A;
+    margin: 15px;
+}
+
+.container{
+    margin: 0 auto;
+    background-color: #23424A;  
+    color: white;
+    padding: 35px 0;
+}
+
+.hero{
+    display: flex;
+    align-items: flex-start;
+    padding: 50px 0;
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.hero__text{
+    width: 60%;
+}
+
+.btn{
+    display: inline-block;
+    background-color: #38CFD9;
+    color: #23424A;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.85em 2em;
+    border-radius: 100px; /* 50% wont work cz it tries to make it a perfect circle.....when this happens we set it in px and higher num sets its corner rounded..if uh set it to 10 corner are rounded very less and after certain size it stays the same like 100px and 900px does the same*/
+}
+
+.btn:hover,
+.btn:focus{
+    opacity: 0.8;
+}
+
+.container2{
+    justify-content: space-between;
+    display: flex;
+    margin: 0 auto;
+}
+
+.text{
+    margin-top: 15px;
+    width: 50%;
+    margin-left: 50px;
+    margin-right: 12px;
+}
+
+.text h2{
+    color: #136C72;
+}
+
+.sidebar{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-right: 2em;
+    display: flex;
+    flex-direction: column;
+    width: 32%;
+    text-align: center;
+    background: #1d9199;
+    color: white;
+    padding: 2em;
+}

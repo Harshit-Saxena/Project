@@ -1,0 +1,51 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+section{
+     display: flex;
+     position: absolute;
+     width: 100%;
+     height: 100vh;
+     align-items: center;
+     justify-content: center;
+     overflow: hidden;
+     background: url(https://images.unsplash.com/photo-1596119459420-71c065186bdb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmFpbnklMjBzdHJlZXR8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80);
+     background-size: cover;
+     background-position: center;
+     background-attachment: fixed;
+}
+
+.box{
+     display: flex;
+     position: absolute;
+     height: 100%;
+     width: 100%;
+     background: url(https://images.unsplash.com/photo-1596119459420-71c065186bdb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmFpbnklMjBzdHJlZXR8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80);
+     background-size: cover;
+     background-position: center;
+     background-attachment: fixed;
+}
+
+section .box:nth-child(1){
+     filter: blur(10px);
+}
+
+section .box:nth-child(2){
+     clip-path: circle(150px at var(--x) var(--y));
+}
+
+.circle{
+     display: flex;
+     position: absolute;
+     top: -150px;
+     left: -150px;
+     height: 300px;
+     width: 300px;
+     border-radius: 50%;
+     border: 1px solid black;
+     box-shadow: 0 5px 25px black;
+     transform: translate(var(--x),var(--y));
+}
