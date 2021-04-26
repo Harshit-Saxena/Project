@@ -9,9 +9,18 @@ body{
 }
 
 header{
+    display: flex;
     color: white;
     background: #23424A;
-    padding: 1.2em;
+    padding: 0.1em;
+    justify-content: space-between;
+}
+
+.nav{
+    font-size: 1em;
+    align-items: center;
+    flex-grow: 1;
+    margin-top: 15px;
 }
 
 .list{
@@ -21,9 +30,20 @@ header{
     list-style: none;
 }
 
+a img{
+    width: 100px;
+    margin: 0 40px;
+}
+
 .nav__item{
     color: white;
     margin-right: 1.5em;
+    
+}
+
+.nav__item-push-right{
+    margin-left: auto;
+    margin-right: 10px;
 }
 
 .nav__link,.nav__link1{
@@ -33,22 +53,25 @@ header{
 }
 
 .nav__link1{
-    margin-left: 10em;
+    margin-left: 2em;
 }
 
 .nav__link4{
+    text-decoration: none;
     background: white;
     color: #23424A;
     border-radius: 100px;
-    padding: 0.5em;
+    padding: 0.25em;
 }
 
-.nav__item:hover{
+.nav__item:hover,
+.nav__item-push-right:hover{
     opacity: 0.7;
 }
 
 .img{
     max-width: 100%;
+    overflow: hidden;
 }
 
 .container1{
@@ -119,4 +142,22 @@ header{
     background: #1d9199;
     color: white;
     padding: 2em;
+}
+
+@media (max-width: 600px) { 
+    .hero,
+    .container2{
+        display: block;
+    }
+
+    .hero__text,
+    .img,
+    .text,
+    .sidebar{
+        width: 100%;
+    }
+
+    .img{
+        margin-top: 2em;
+    }
 }

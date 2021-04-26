@@ -1,0 +1,48 @@
+*{
+     box-sizing: border-box;
+     padding: 0;
+     margin: 0;
+     font-family: 'Poppins',sans-serif;
+}
+
+body{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+     background: #252839;
+}
+
+h2{
+     position: relative;
+     font-size: 11vw;
+     color: #252839;
+     -webkit-text-stroke: 0.2vw #383d52; /* This forms an outline around the text of that width and clr */
+     text-transform: uppercase;
+     /* If we add border right here it will always stay to the right and we dont want that..we want it to be animated and keep on moving so we add it in before */
+}
+
+h2::before{
+     content: attr(data-text); /* Text = data text will be clrd by the bar movement only */
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 0%; /* If width will be 100% the pointer will be at the end and not at start */
+     height: 100%;
+     color: #01fe87;
+     -webkit-text-stroke: 0vw #383d52; /* 0vw makes the outline go away when the bar moves over it and makes it look dope */ 
+     border-right: 2px solid #01fe87; /* This provides the pointer at the end */
+     overflow: hidden;  /* Without this the text clr will always be there which we dont want */  
+     animation: animate 5s infinite linear;
+}
+
+@keyframes animate{
+     0%,10%,100%{
+          width: 0;
+          filter: hue-rotate(0deg); /* This filter makes the object change clr based on the hue circle */
+     }
+     70%,90%{
+          width: 100%;
+          filter: hue-rotate(360deg); /* This filter makes the object change clr based on the hue circle */
+     }
+}

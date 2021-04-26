@@ -1,0 +1,93 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+body{
+     background: black;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+}
+
+.circle{
+     position: relative;
+     background: linear-gradient(45deg, transparent, transparent 40%, #e5f403);
+     height: 150px;
+     width: 150px;
+     border-radius: 50%;
+     animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate{
+     0%{
+          transform: rotate(0deg);
+          filter: hue-rotate(0deg);
+     }
+     100%{
+          transform: rotate(360deg);
+          filter: hue-rotate(360deg);
+
+     }
+}
+.circle:before{
+     content: '';
+     position: absolute;
+     top: 6px; /* Top left right bottom px decides the size of the rotating light...higher means thicker */
+     left: 6px;
+     right: 6px;
+     bottom: 6px;
+     background: #000;
+     border-radius: 50%;
+     z-index: 2;
+}
+.circle:after{
+     content: '';
+     position: absolute;
+     top: 0px;
+     left: 0px;
+     right: 0px;
+     bottom: 0px;
+     background: linear-gradient(45deg, transparent, transparent 40%, #f40388);
+     border-radius: 50%;
+     z-index: 1;
+     filter: blur(30px);
+}
+
+
+.circle2{
+     position: relative;
+     background: linear-gradient(45deg, transparent, transparent 40%, #d803f4);
+     height: 150px;
+     width: 150px;
+     margin-left: 20em;
+     border-radius: 50%;
+     animation: rotate 2s linear infinite;
+}
+
+.circle2:before{
+     content: '';
+     position: absolute;
+     top: 6px;
+     left: 6px;
+     right: 6px;
+     bottom: 6px;
+     background: #000;
+     border-radius: 50%;
+     z-index: 2;
+}
+.circle2:after{
+     content: '';
+     position: absolute;
+     top: 0px;
+     left: 0px;
+     right: 0px;
+     bottom: 0px;
+     background: linear-gradient(45deg, transparent, transparent 40%, #06c2f1); /* This clr makes the hue clr chng and adds clr to the light */
+     border-radius: 50%;
+     z-index: 1000;
+     z-index: 1;
+     filter: blur(30px);
+}

@@ -1,0 +1,48 @@
+*,*::before,*::after{
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     font-family: sans-serif;
+}
+
+body{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+     background: #252839;
+}
+
+h2{
+     position: relative;
+     font-size: 14vw;
+     color: #252839;
+     -webkit-text-stroke: 0.3vw #414664;
+     text-transform: uppercase;
+     border-bottom: 15px solid #252839;
+     line-height: 1.2em;
+     letter-spacing: 0.05em;
+}
+
+h2::before{
+     position: absolute;
+     content: attr(data-text);
+     border-bottom: 15px solid #0cc1ee;
+     color: #0cc1ee;
+     top: 0;
+     left: 0;
+     width: 0%;
+     height: 100%;
+     overflow: hidden;
+     -webkit-text-stroke: 0vw #414664;
+     animation: animate 6s infinite linear;
+}
+
+@keyframes animate{
+     0%,10%,100%{
+          width: 0%;
+     }
+     70%,90%{
+          width: 100%;
+     }
+}
