@@ -1,0 +1,30 @@
+body{
+     overflow-y: hidden;
+}
+
+.slide{
+     scroll-snap-type: x mandatory;
+     display: flex;
+     -webkit-overflow-scrolling: touch;
+     overflow-x: scroll;
+}
+
+section{
+     height: 100vh;
+     min-width: 100vw;
+     background-repeat: no-repeat;
+     background-size: cover;
+     scroll-snap-align: start;
+}
+
+.sec1{
+     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSslv3lzJ6p-jtKwmD6K4w82GdCf5Lj9nxB8Q&usqp=CAU);
+}
+
+.sec2{
+     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSslv3lzJ6p-jtKwmD6K4w82GdCf5Lj9nxB8Q&usqp=CAU);
+}
+
+.sec3{
+     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSslv3lzJ6p-jtKwmD6K4w82GdCf5Lj9nxB8Q&usqp=CAU);
+}

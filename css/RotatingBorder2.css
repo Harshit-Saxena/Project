@@ -1,0 +1,88 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+body{
+     display: flex;
+     height: 100vh;
+     justify-content: center;
+     align-items: center;
+     background: #030201;
+}
+
+.container{
+     position: relative;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+     -webkit-box-reflect: below 1px linear-gradient(#0001,#0004);  /* Isnt supported in Firefox rn */
+}
+
+.loader{
+     position: relative;
+     width: 200px;
+     height: 200px;
+     background: #0d2323; /* This is the clr of the line where it rotates */
+     border-radius: 50%;
+     animation: animate 2s linear infinite;
+}
+
+@keyframes animate{
+     0%{
+          transform: rotate(0deg);
+          filter: hue-rotate(0deg);
+     }
+     100%{
+          transform: rotate(360deg);
+          filter: hue-rotate(360deg);
+     }
+}
+
+.loader::before{
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 50%;
+     height: 100%;
+     background: linear-gradient(to top, transparent, limegreen);
+     background-size: 100px 180px;
+     background-repeat: no-repeat;
+     border-top-left-radius: 100px;
+     border-bottom-left-radius: 100px;
+}
+.loader::after{
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 50%;
+     transform: translateX(-50%);
+     width: 20px;
+     height: 20px;
+     background: limegreen;
+     border-radius: 50%;
+     z-index: 10;
+     box-shadow: 0 0 10px limegreen,
+                 0 0 20px limegreen,
+                 0 0 30px limegreen,
+                 0 0 40px limegreen,
+                 0 0 50px limegreen,
+                 0 0 60px limegreen,
+                 0 0 70px limegreen,
+                 0 0 80px limegreen,
+                 0 0 90px limegreen,
+                 0 0 100px limegreen;
+}
+
+.loader span{
+     position: absolute;
+     top: 18px;
+     left: 18px;
+     right: 18px;
+     bottom: 18px;
+     background-color: #8c9494;
+     border-radius: 50%;
+}
