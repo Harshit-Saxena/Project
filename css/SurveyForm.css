@@ -138,6 +138,7 @@ body{
   
     margin: 0 auto;
 }
+
 #title{
     text-align: center;
     color: white;
@@ -157,6 +158,8 @@ span{
     padding: 2.5rem;
     border: 1px solid #38388a;
     border-radius: 0.75rem;
+    backdrop-filter: blur(20px);
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
 }
 label,p{
     display: flex;
