@@ -1,0 +1,45 @@
+*,*::before,*::after{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+body{
+     background: black;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+     font-size: 3rem;
+     text-transform: uppercase;
+     line-height: 1.6;
+     letter-spacing: 5px;
+     color: rgb(58, 56, 56);
+}
+
+h2 span{
+    transition: 0.5s;
+}
+
+h2:hover span:nth-child(1){
+     margin-right: 10px;
+}
+
+h2:hover span:nth-child(2){
+     margin-left: 20px;
+}
+
+h2:hover span:nth-child(1)::after{
+     content: "'";
+}
+
+h2:hover span{
+     color: #fff;
+     text-shadow: 0 0 10px #fff,
+                  0 0 20px #fff,
+                  0 0 40px #fff,
+                  0 0 80px #fff,
+                  0 0 120px #fff,
+                  0 0 160px #fff,
+                  0 0 200px #fff;
+}

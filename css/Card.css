@@ -1,0 +1,35 @@
+*,*::before,*::after{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+.content{
+     position: relative;
+     display:flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+     background: black;
+}
+
+.container{
+     position: absolute;
+     height: 400px;
+     width: 300px;
+     background: blueviolet;
+     transition: all 0.5s linear;
+     z-index: 3;
+}
+
+.container:hover{
+     height: 500px;
+     width: 400px;
+     z-index: 1;
+}
+
+p{
+     position: absolute;
+     z-index: 2;
+     color: white;
+}
