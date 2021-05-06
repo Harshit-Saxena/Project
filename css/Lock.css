@@ -1,0 +1,28 @@
+body{
+     background: #E38F66;
+}
+
+div{
+     position: absolute;
+     width: 200px;
+     height: 200px;
+     background: #AA445F;
+     border-radius: 50%;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+}
+
+div::before{
+     content: '';
+     position: absolute;
+     width: 80px;
+     height: 80px;
+     border: 30px solid #F7EC7D;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%) rotate(-45deg);
+     border-radius: 50%;
+     border-top-color: transparent;
+     border-bottom-color: transparent;
+}

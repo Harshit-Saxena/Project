@@ -1,0 +1,44 @@
+body{
+  background: #6592CF;
+}
+.end{
+  position: absolute;
+  width: 20px;
+  height: 55px;
+  background: #060F55;
+  top: 315px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.middle{
+  position: absolute;
+  height: 140px;
+  width: 140px;
+  background: #060F55;
+  border-radius: 50%;
+  top: 180px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.top{
+  position: absolute;
+  height: 140px;
+  width: 140px;
+  top: 118px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+span{
+  width: calc(100% / 7);
+}
+span:nth-child(odd){
+  height: 130px;
+  background: #060F55;
+  border-radius: 20px 20px 0 0;
+}
+  span:nth-child(even){
+  height: 110px;
+  background: #6592CF;
+  border-radius: 0 0 20px 20px;
+}

@@ -1,0 +1,32 @@
+body{
+     background: #62306D;
+     display: flex;
+     justify-content: center;
+     align-items: flex-end;
+     margin-top: 300px;
+}
+div{
+     height: 100px;
+     width: 100px;
+     background: #F7EC7D;
+     position: relative;
+}
+div:nth-child(2){
+     height: 200px;
+}
+div:after{
+     position: absolute;
+     content: '';
+     width: 60px;
+     height: 60px;
+     background: #E38F66;
+     left: 50%;
+     top: 0;
+     transform: translate(-50%,-50%);
+     border-radius: 50%;
+     border: 20px solid #AA445F;
+}
+div:nth-child(2):after{
+     background: #AA445F;
+     border: 20px solid #E38F66;
+}

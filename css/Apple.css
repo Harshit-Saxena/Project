@@ -1,0 +1,34 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+.box{
+     background-color: black;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+}
+
+.logo{
+     color: white;
+     font-size: 10em;
+     text-shadow: 0 0 50px red,
+                  0 0 100px red,
+                  0 0 150px red,
+                  0 0 200px red,
+                  0 0 250px red,
+                  0 0 300px red;
+     animation: glow 5s linear infinite;
+}
+
+@keyframes glow{
+     0%{
+          filter: hue-rotate(0deg);
+     }
+     100%{
+          filter: hue-rotate(360deg);
+     }
+}

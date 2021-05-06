@@ -1,0 +1,36 @@
+  body{
+    background: #62306D;
+    position: relative;
+  }
+
+  .obj1{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: #F7EC7D;
+    border-radius: 100px 100px 0px 0px; 
+    top: 42px;
+    left: 842px;
+  }
+
+  .obj2{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: #F7EC7D;
+    border-radius: 100px 100px 0px 0px; 
+    top: 142px;
+    left: 742px;
+    transform: rotate(180deg);
+  }
+
+  .obj3{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: #F7EC7D;
+    border-radius: 100px 100px 0px 0px; 
+    top: 142px;
+    right: 862px;
+    transform: rotate(180deg);
+  }
