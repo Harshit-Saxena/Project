@@ -1,0 +1,97 @@
+*{
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+     font-family: sans-serif;
+}
+
+body{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     min-height: 100vh;
+     background: #000;
+}
+
+section{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-wrap: wrap;
+     transform-style: preserve-3d;
+     width: 1100px;
+}
+
+.card{
+     margin: 10px;
+     position: relative;
+     width: 320px;
+     height: 320px;
+     padding: 20px;
+     transform-style: preserve-3d;
+     perspective: 1000px;
+}
+
+.box{
+     position: absolute;
+     top: 0%;
+     left: 0%;
+     width: 100%;
+     height: 100%;
+     transform-style: preserve-3d;
+     transition: 1s ease;
+}
+
+.box:hover{
+     transform: rotateY(180deg);
+}
+
+.imgbox{
+     position: absolute;
+     top: 0%;
+     left: 0%;
+     width: 100%;
+     height: 100%;
+}
+.imgbox img{
+     position: absolute;
+     top: 0%;
+     left: 0%;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+}
+
+.contentbox{
+     position: absolute;
+     top: 0%;
+     left: 0%;
+     width: 100%;
+     height: 100%;
+     background: #333;
+     backface-visibility: hidden;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     transform-style: preserve-3d;
+     transform: rotateY(180deg);
+}
+
+.contentbox div{
+     transform-style: preserve-3d;
+     padding: 20px;
+     background: linear-gradient(45deg, #fe0061, #ffeb3b);
+     transform: translateZ(100px);
+}
+
+.contentbox div h2{
+     color: white;
+     font-size: 20px;
+     letter-spacing: 1.5px;
+}
+
+.contentbox div p{
+     color: white;
+     font-size: 16px;
+     letter-spacing: 1px;
+}
