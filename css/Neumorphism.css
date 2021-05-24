@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&family=Texturina:wght@500&display=swap');
+
+*,::before,::after{
+     margin: 0;
+     padding: 0;
+     font-family: 'Josefin Sans', sans-serif;
+     box-sizing: border-box;
+}
+
+body{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+     background-color: #131419;
+}
+
+.icon img{
+     width: 80px;
+     height: 80px;
+     margin-bottom: 15px;
+     filter: drop-shadow(-2px -2px 5px rgb(214, 31, 153))
+             drop-shadow( 6px  6px 6px rgb(189, 46, 106));
+}
+
+.form{
+     position: relative;
+     width: 400px;
+     padding: 40px 40px 60px;
+     background-color: #131419;
+     border-radius: 10px;
+     text-align: center;
+     box-shadow: -5px -5px 10px rgba(248, 248, 248, 0.089),
+                  5px 5px 10px rgba(5, 5, 5, 0.5);
+}
+
+.form h2{
+     color: #d43232;
+     font-weight: 800;
+     text-transform: uppercase;
+     letter-spacing: 4px;
+}
+
+.input{
+     text-align: left;
+     margin-top: 40px;
+}
+
+.inputBox{
+     margin-top: 20px;
+}
+
+.inputBox label{
+     display: block;
+     color: #868686;
+     margin-bottom: 5px;
+     font-size: 18px;
+}
+
+.inputBox input{
+     width: 100%;
+     height: 50px;
+     background: #131419;
+     border: none;
+     outline: none;
+     border-radius: 40px;
+     padding: 5px 15px;
+     color: #11abf3;
+     box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.1),
+                 inset  2px  2px 6px rgba(0, 0, 0, 0.8);
+}
+
+input[type="submit"]{
+     margin-top: 20px;
+     box-shadow: -2px -2px 6px rgba(255, 255, 255, 0.1),
+                  2px  2px 6px rgba(0, 0, 0, 0.8);
+}
+
+input[type="submit"]:active{
+     color: #006c9c;
+     margin-top: 20px;
+     box-shadow: inset -2px -2px 6px rgba(248, 248, 248, 0.01),
+                 inset 2px  2px 6px rgba(5, 5, 5, 0.8);
+}
+
+.inputBox input::placeholder{
+     color: rgb(66, 65, 65);
+     font-size: 18px;
+}
+
+.forget{
+     color: #555;
+     margin-top: 30px 
+}
+
+.forget a{
+     color: red;
+}
