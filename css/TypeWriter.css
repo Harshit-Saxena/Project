@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+:root{
+     --typewriterSpeed: 8s;
+     --typewriterChar: 25;
+}
+
+*{
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+}
+
+body{
+     background: rgb(245,243,234);
+     font-family: 'Roboto Mono', monospace;
+     display: grid;
+     place-content: center;
+     min-height: 100vh;
+}
+
+h1{
+     position: relative; /*  Without this the pseduo code will be relative to the body and cover the whole screen */
+     font-size: 35px;
+     letter-spacing: 1.5px;
+}
+
+h1::after,
+h1::before{
+     content: '';
+     position: absolute;
+     inset: 0;
+}
+
+h1::before{
+     background: rgb(245,243,234); /* Same as bg to make it invisible but it is there */
+     animation: typewriter var(--typewriterSpeed) steps(var(--typewriterChar)) 1s forwards; /* 1s is not the speed but the delay  */
+}
+
+h1:after{
+     width: 0.12rem;
+     left: 0%;
+     background: black;
+     animation: 
+     typewriter var(--typewriterSpeed) steps(var(--typewriterChar)) 1s forwards, /* * 1s is not the speed but the delay  */
+     blink 750ms steps(var(--typewriterChar)) infinite;
+}
+
+p{
+     text-align: center;
+     font-size: 25px;
+     line-height: 5;
+     opacity: 0;
+     transform: translateY(-3rem); /*  Y is up N down */
+     animation: fadeInUp 2s calc(var(--typewriterSpeed) + 1.2s) forwards;
+}
+
+@keyframes typewriter{
+     to{
+          left: 100%;
+     }
+}
+
+@keyframes blink{
+     to{
+          background: transparent; /* * Means same as 0% opacity 0 to 100% opacity 1 */
+     }
+}
+
+@keyframes fadeInUp{
+     to{
+          opacity: 1;
+          transform: translateY(0);
+     }
+}

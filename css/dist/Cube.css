@@ -1,0 +1,118 @@
+section {
+  --x: 300px;
+  --y: 250px;
+  --z: 200px;
+  --color: 0, 120, 255;
+  --border: 2px;
+  --transition: .5s;
+  height: var(--y);
+  width: var(--x);
+  position: relative;
+  cursor: pointer;
+  transform: rotateX(90deg) rotateZ(45deg) translateZ(-2.5rem);
+  transform-style: preserve-3d;
+  transition: var(--transition);
+}
+
+section div {
+  transition: var(--transition);
+}
+
+.bottom {
+  height: var(--y);
+  width: var(--x);
+  background: rgba(var(--color), 0.25);
+  border: var(--border) solid rgba(var(--color), 0.5);
+}
+
+.north,
+.east,
+.south,
+.west {
+  background: rgba(var(--color), 0.25);
+  border: 2px solid rgba(var(--color), 0.5);
+  position: absolute;
+  transform-style: preserve-3d;
+}
+
+.north,
+.south {
+  width: var(--x);
+  height: var(--z);
+}
+
+.east,
+.west {
+  width: var(--z);
+  height: var(--y);
+}
+
+.north {
+  bottom: calc(100% - var(--border));
+  border-bottom: 0;
+  transform-origin: bottom;
+  transform: rotateX(-90deg);
+}
+
+.east {
+  left: calc(100% - var(--border));
+  border-left: 0;
+  transform-origin: left;
+  transform: rotateY(-90deg);
+}
+
+.south {
+  top: calc(100% - var(--border));
+  border-top: 0;
+  transform-origin: top;
+  transform: rotateX(90deg);
+}
+
+.west {
+  right: calc(100% - var(--border));
+  border-right: 0;
+  transform-origin: right;
+  transform: rotateY(90deg);
+}
+
+section.open {
+  --color: 0, 255, 0;
+  transform: rotateX(0deg) rotateZ(0deg) translateZ(0);
+}
+
+.open .north,
+.open .east,
+.open .south,
+.open .west {
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+
+main {
+  transform-style: preserve-3d;
+}
+
+span {
+  color: white;
+  position: fixed;
+  bottom: 1em;
+  display: block;
+  font-size: 3rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  overflow: hidden;
+  background: black;
+  perspective: 100em;
+  perspective-origin: 50% calc(50% - 50em);
+}

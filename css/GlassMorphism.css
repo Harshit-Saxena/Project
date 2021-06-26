@@ -1,0 +1,24 @@
+body{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+     background: url(/images/Zen1.jpg);
+}
+
+.glass-container{
+     width: 700px;
+     height: 375px;
+     color: white;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 20px;
+     border-radius: 30px;
+     backdrop-filter: blur(3px);
+     background-color: transparent;
+     box-shadow: rgba(53, 51, 51, 0.411) 15px 5px 5px;
+     border: 2px rgba(243, 241, 241, 0.4) solid;
+     border-bottom: 2px rgba(40,40,40,0.35) solid;
+     border-right: 2px rgba(40,40,40,0.35) solid;
+}
