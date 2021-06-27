@@ -1,9 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap");
 section {
   --x: 300px;
   --y: 250px;
   --z: 200px;
-  --color: 0, 120, 255;
-  --border: 2px;
+  --color: 0, 255, 255;
+  --border: 1px;
   --transition: .5s;
   height: var(--y);
   width: var(--x);
@@ -21,7 +22,8 @@ section div {
 .bottom {
   height: var(--y);
   width: var(--x);
-  background: rgba(var(--color), 0.25);
+  background: rgba(var(--color), 0.75);
+  /* .75 decides the opacity of the bottom */
   border: var(--border) solid rgba(var(--color), 0.5);
 }
 
@@ -29,7 +31,7 @@ section div {
 .east,
 .south,
 .west {
-  background: rgba(var(--color), 0.25);
+  background: rgba(var(--color), 0.15);
   border: 2px solid rgba(var(--color), 0.5);
   position: absolute;
   transform-style: preserve-3d;
@@ -47,6 +49,7 @@ section div {
   height: var(--y);
 }
 
+/* Yup I figured how to make this box in a chair...chng the rotate sign - and + */
 .north {
   bottom: calc(100% - var(--border));
   border-bottom: 0;
@@ -76,7 +79,7 @@ section div {
 }
 
 section.open {
-  --color: 0, 255, 0;
+  --color:	255, 255, 0;
   transform: rotateX(0deg) rotateZ(0deg) translateZ(0);
 }
 
@@ -89,14 +92,17 @@ section.open {
 
 main {
   transform-style: preserve-3d;
+  /* Imp for the 3d look on the box */
 }
 
 span {
-  color: white;
+  font-family: "Poppins", sans-serif;
+  color: orangered;
   position: fixed;
-  bottom: 1em;
+  bottom: 2em;
   display: block;
   font-size: 3rem;
+  text-transform: uppercase;
 }
 
 * {
@@ -114,5 +120,6 @@ html {
   overflow: hidden;
   background: black;
   perspective: 100em;
-  perspective-origin: 50% calc(50% - 50em);
+  perspective-origin: 50% calc(60% - 40em);
+  /* " - " makes the view point from above..+ is for below*/
 }
