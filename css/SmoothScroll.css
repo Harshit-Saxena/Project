@@ -1,0 +1,44 @@
+*{
+     box-sizing: border-box;
+}
+
+html{
+     scroll-behavior: smooth;
+}
+
+body{
+     margin: 0;
+}
+
+nav{
+     position: fixed;
+     background: #333;
+     padding: 2em;
+     width: 15vw;
+     height: 100vh;
+     display: block;
+}
+
+a{
+     text-decoration: none;
+     color: white;
+     display: block;
+     padding: 20px 0;
+}
+
+section{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     min-height: 100vh;
+}
+
+#a{
+     background: rgba(70, 131, 180, 0.856);
+}
+#b{
+     background: rgba(121, 177, 31, 0.747);
+}
+#c{
+     background: rgba(209, 157, 165, 0.664);
+}

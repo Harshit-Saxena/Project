@@ -1,3 +1,7 @@
 {
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "cSpell.ignoreWords": [
+        "pulkit"
+    ],
+    "compile-hero.disable-compile-files-on-did-save-code": false
 }

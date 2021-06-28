@@ -1,0 +1,43 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+body{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+     background: rgb(50, 137, 187);
+}
+
+.drop{
+     top: 20px;
+     left: 25px;
+     position: relative;
+     width: 200px;
+     height: 200px;
+     border-radius: 51% 49% 48% 52% / 62% 44% 56% 38%;
+     background: rgb(59, 178, 207);
+     opacity: 0.8;
+     border: 2px solid rgb(59, 178, 207);
+     box-shadow: -15px 10px 52px rgb(34, 65, 83),
+                 inset -6px 6px 10px #1b6cfb,
+                 inset 2px 6px 10px #1b6cfb,
+                 inset 20px -20px 22px #1a74e5,
+                 inset 40px -40px 44px #a8ceff;
+}
+
+.drop::before{
+     content: "";
+     position: absolute;
+     height: 40px;
+     width: 40px;
+     background: #e6fdfb;
+     border-radius: 51% 49% 48% 52% / 62% 44% 56% 38%;
+     left: 130px;
+     top: 40px;
+     box-shadow: 16px 40px 0 -10px white;
+     opacity: 0.8;
+}

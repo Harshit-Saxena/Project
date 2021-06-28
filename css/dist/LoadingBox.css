@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: black;
+}
+
+.loader {
+  /* Box we will be working on */
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(245, 244, 244, 0.295);
+  color: white;
+  transition: 0.4s;
+  overflow: hidden;
+}
+
+.loader:hover {
+  background: #12dde4;
+  color: black;
+  box-shadow: 0 0 6px #12dde4, 0 0 20px #12dde4, 0 0 50px #12dde4, 0 0 200px #12dde4;
+}
+
+span:nth-child(1) {
+  position: absolute;
+  width: 100%;
+  height: 7px;
+  top: 0;
+  left: -100%;
+  background: linear-gradient(90deg, transparent, #12dde4);
+  animation: animate1 2s linear infinite;
+  animation-delay: 0s;
+}
+
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%, 100% {
+    left: 100%;
+  }
+}
+span:nth-child(3) {
+  position: absolute;
+  width: 100%;
+  height: 7px;
+  bottom: 0;
+  right: -100%;
+  background: linear-gradient(270deg, transparent, #12dde4);
+  animation: animate3 2s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+  50%, 100% {
+    right: 100%;
+  }
+}
+span:nth-child(2) {
+  position: absolute;
+  width: 7px;
+  height: 100%;
+  top: -100%;
+  right: 0;
+  background: linear-gradient(180deg, transparent, #12dde4);
+  animation: animate2 2s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%, 100% {
+    /* 50% is imp for the lasers to be in sync */
+    top: 100%;
+  }
+}
+.loader span:nth-child(4) {
+  position: absolute;
+  width: 7px;
+  height: 100%;
+  bottom: -100%;
+  left: 0;
+  background: linear-gradient(360deg, transparent, #12dde4);
+  animation: animate4 2s linear infinite;
+  animation-delay: 1.5s;
+}
+
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%, 100% {
+    bottom: 100%;
+  }
+}
+.loader h3 {
+  color: #12dde4;
+  overflow: hidden;
+  border-right: 2px solid #12dde4;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.5s;
+  animation: typing 3s steps(11) infinite;
+}
+
+@keyframes typing {
+  0%, 90%, 100% {
+    width: 0px;
+  }
+  50%, 60% {
+    width: 137.167px;
+  }
+}
+.loader:hover h3 {
+  color: white;
+  border-right: 2px solid white;
+}

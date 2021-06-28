@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+p {
+
+  font-family: 'Poppins', sans-serif;
+  line-height: 16px;
+  background: url("https://lh3.googleusercontent.com/ucwmgUyIV0tcZIyVTh9UYbEGMLOGVBjf4vmxsH0hfOaOqqPWhomy_KYy_vjfPj23LYA9arQSQz55LhRV7j78ur_IVPI8JBqj5p1lQBHl0N4BSxb15QtBVnMxRGuTPGja-vPJbGftsyb1D00yyysgGjXeJgQAI9KWswD4I9pFMnJaOf4xZqM-btKXRCeueD_NGkya3hheOM9mNAOzrpLQa312vb_v6jreVPj6-aoTt7sREX5J-hh5lJakY0MuwFBhoIJh6jTSGmPJJJVgLu4zsQR2Q-WHTgiC5PlCAq6EhPNOTPrBeOPl5DJrTsRnsj4wbYTxnRjgtWHqGEvsBVmS1E8tW7dQphVJm44fhuxM88FxXfZnpFc84WewZ0lsAlv09lkrTaKZzbO5baDCkAjmYMMHUOnWp-QwCn4UoNywaIwsIC1QVlDRJVI5DymX6gLxKYbeUkzaroyt-jLnKuTTkNMnn1DD4JvoqI-z79yAYqF7DOCpbzvo-sIJCi2ixB7YINaX1pvql31XFsr-ttqfRrAoiReHcKhXsbaKfxavC8ZjlA4bAkvNzplEA6TsOOS7LwfXDg8wJLprn4KBYOGXSG6L6i1PSjjIDkkG_5SGtZGWsft5pYpPicyTOLJfrwh8Y6Aiuelav4OLTJ4u6QuUsmxg1v2XK6ZAbEBm7A2flIPPm7xOrYn0yxWNH624ZmDGWu4n7nm9rtVdXqVg=w746-h994-no?authuser=0");
+  -webkit-background-clip: text;
+  background-clip: text; /* Cz vscode said to write this for compatability */
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  background-size: 75vh;
+}
+
+body {
+  background: rgb(0, 0, 0);
+  overflow: hidden;
+}

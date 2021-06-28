@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo:ital@1&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arvo', serif;
+}
+
+body {
+  background: #111;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+a {
+  position: relative;
+  width: 400px;
+  height: 100px;
+  margin: 15px 10px;
+  text-decoration: none;
+  background: #222;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+a::before,
+a::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background: #00fe73;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+a:before {
+  top: 0;
+  left: 0;
+}
+
+a::after {
+  top: 0;
+  right: 0;
+}
+
+a:nth-child(2)::before,
+a:nth-child(2)::after {
+  background: #fe1a6f;
+}
+
+a:hover::before,
+a:hover::after {
+  width: 50%;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+a span {
+  position: absolute;
+  z-index: 1;
+  color: white;
+  font-size: 25px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  text-shadow: 5px 5px 10px #fe1a6f;
+}
+
+a span:nth-child(1) {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+a:hover span:nth-child(1) {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+a span:nth-child(2) {
+  -webkit-transform: scale(3);
+          transform: scale(3);
+  opacity: 0;
+  color: #111;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+a:hover span:nth-child(2) {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  opacity: 1;
+  z-index: 10;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+/*# sourceMappingURL=Button.css.map */

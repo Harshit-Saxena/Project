@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="/css/Cube.css">
+     <title>Cube</title>
+</head>
+<body>
+     <main>
+          <section>
+            <div class='north'></div>
+            <div class='east'></div>
+            <div class='south'></div>
+            <div class='west'></div>
+            <div class='bottom'></div>
+          </section>
+        </main>
+        
+        <span>click the box!</span>
+
+        <script>
+             const box = document.getElementsByTagName('section')[0]
+             box.addEventListener('click', () => {
+             box.classList.toggle('open')
+          })
+        </script>
+</body>
+</html>
