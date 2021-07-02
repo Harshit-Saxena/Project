@@ -9,6 +9,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -24,11 +28,13 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  /* This makes the icons go side by side */
 }
 
 ul li {
   position: relative;
   list-style: none;
+  /* Removes the dots */
 }
 
 ul li a {
@@ -45,11 +51,10 @@ ul li a {
       -ms-flex-align: center;
           align-items: center;
   background: #fff;
-  margin: 0 10px;
+  margin: 15px 15px;
   font-size: 50px;
   text-decoration: none;
   border-radius: 50%;
-  color: #e2e2e2;
   -webkit-box-shadow: inset -1px -1px 2px rgba(0, 0, 0, 0.2), 2px 2px 10px rgba(0, 0, 0, 0.2);
           box-shadow: inset -1px -1px 2px rgba(0, 0, 0, 0.2), 2px 2px 10px rgba(0, 0, 0, 0.2);
   -webkit-transition: 0.5s;
@@ -58,6 +63,7 @@ ul li a {
 
 ul li a i {
   color: #fff;
+  /* Color of the icons */
   position: relative;
   z-index: 1;
 }
@@ -65,12 +71,13 @@ ul li a i {
 li a:hover {
   -webkit-box-shadow: inset -1px -1px 2px rgba(0, 0, 0, 0.2), 2px 24px 10px rgba(0, 0, 0, 0.2);
           box-shadow: inset -1px -1px 2px rgba(0, 0, 0, 0.2), 2px 24px 10px rgba(0, 0, 0, 0.2);
-  color: #999;
+  color: #585050;
   -webkit-transform: translateY(-20px);
           transform: translateY(-20px);
 }
 
 ul li a:before {
+  /* This makes the kinda transparent circle around the icons...inset 10px makes it inside the circle and not on the border */
   content: '';
   position: absolute;
   inset: 10px;
@@ -79,6 +86,7 @@ ul li a:before {
 }
 
 ul li:nth-child(1) a:before {
+  /* a:before is very imp otherwise it will clr the background of the icons in a square shape cz a:before is 50% as we said above */
   background: #1877f2;
 }
 
@@ -96,5 +104,32 @@ ul li:nth-child(4) a:before {
 
 ul li:nth-child(5) a:before {
   background: #2cd32c;
+}
+
+/* Here I made another line and just removed the inset to make the white border go away..and to place them in columns I chngd the body flex direction to columns  */
+#two li:nth-child(1) a:before {
+  /* a:before is very imp otherwise it will clr the background of the icons in a square shape cz a:before is 50% as we said above */
+  background: #1877f2;
+  inset: 0px;
+}
+
+#two li:nth-child(2) a:before {
+  background: #1da1f2;
+  inset: 0px;
+}
+
+#two li:nth-child(3) a:before {
+  background: #ff00aa;
+  inset: 0px;
+}
+
+#two li:nth-child(4) a:before {
+  background: #f8e111;
+  inset: 0px;
+}
+
+#two li:nth-child(5) a:before {
+  background: #2cd32c;
+  inset: 0px;
 }
 /*# sourceMappingURL=Icons.css.map */
