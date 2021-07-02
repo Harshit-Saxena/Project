@@ -1,0 +1,17 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+.box{
+     background: limegreen;
+     width: 20rem;
+     aspect-ratio: 1/1;
+     position: fixed;
+     inset: 0;
+     margin: auto;
+     box-shadow: 1rem 2rem 0rem -1rem blue, /* left-right(h-offset) top-bottom(v-offset) blur spread clr */
+                 2rem 4rem 0rem -2rem red,
+                 3rem 6rem 0rem -3rem purple;
+}
