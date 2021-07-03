@@ -150,7 +150,6 @@ body {
   bottom: 360px;
   width: 100vw;
   height: 10px;
-  background: black;
 }
 
 .grass {
@@ -160,8 +159,8 @@ body {
   height: 20px;
   background: url(/images/grass.png);
   background-position: bottom;
-  -webkit-animation: move 5s linear infinite;
-          animation: move 5s linear infinite;
+  -webkit-animation: move 3s linear infinite;
+          animation: move 3s linear infinite;
 }
 
 @-webkit-keyframes move {
