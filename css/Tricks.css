@@ -12,8 +12,7 @@
   position: fixed;
   inset: 0;
   margin: auto;
-  box-shadow: 1rem 2rem 0rem -1rem blue, 
-              2rem 4rem 0rem -2rem red, 
-              3rem 6rem 0rem -3rem yellow, 
-              4rem 8rem 0rem -4rem purple;
+  -webkit-box-shadow: 1rem 2rem 0rem -1rem blue, 2rem 4rem 0rem -2rem red, 3rem 6rem 0rem -3rem purple;
+          box-shadow: 1rem 2rem 0rem -1rem blue, 2rem 4rem 0rem -2rem red, 3rem 6rem 0rem -3rem purple;
 }
+/*# sourceMappingURL=Tricks.css.map */
