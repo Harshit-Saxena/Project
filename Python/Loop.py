@@ -1,4 +1,3 @@
-
 i=1
 while i <=10:  # ! : is very imp to go into the while loop 
      print(i, end = ' ') # Here we chngd the final value of \n which means nxt line but we chngd it to space
