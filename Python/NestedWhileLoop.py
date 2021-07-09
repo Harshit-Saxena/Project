@@ -1,7 +1,7 @@
 # For star like shape for string
 
 name='CHITKARA'
-for i in range(len(name)): #Rows
+for i in range(1, len(name)): #Rows
      for j in range(i + 1): #Columns
           print(name[j],end = " ") 
      print()
@@ -17,6 +17,7 @@ for i in (name):
 print('\n')
 
 # 3rd value is the increment value in for loop 
+
 for i in range(1,51,3):
      print(i,end = " ")
 
