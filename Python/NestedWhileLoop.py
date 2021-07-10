@@ -1,12 +1,15 @@
 # For star like shape for string
 
 name='CHITKARA'
-for i in range(1, len(name)): #Rows
+for i in range(len(name)): #Rows     It was 1 , len(name) which made it print C and H together but we cant it to start from index 0
+
      for j in range(i + 1): #Columns
           print(name[j],end = " ") 
      print()
 
 print('\n');
+
+
 
 
 # For single character in a row
@@ -16,12 +19,16 @@ for i in (name):
 
 print('\n')
 
+
+
 # 3rd value is the increment value in for loop 
 
 for i in range(1,51,3):
      print(i,end = " ")
 
 print('\n')
+
+
 
 # While loop for star like shape for numbers
 
@@ -35,6 +42,9 @@ while i<=5:
      print()
 
 print('\n')
+
+
+
 
 # For loop for the star like shape of numbers
 
