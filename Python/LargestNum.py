@@ -4,3 +4,11 @@ for i in (list):  # This line makes i iterate thru all the list
      if i > largest:
           largest = i
 print(f"Largest Number in the list is: {i}") 
+
+
+matrix = [
+     [1,2,3],
+     [4,5,6],
+     [7,8,9]
+]
+print(matrix[1][2])
