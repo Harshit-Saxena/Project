@@ -2,8 +2,7 @@
 
 name='CHITKARA'
 for i in range(len(name)): #Rows     It was 1 , len(name) which made it print C and H together but we cant it to start from index 0
-
-     for j in range(i + 1): #Columns
+     for j in range(i+1): #Columns  Range by default is from index 0
           print(name[j],end = " ") 
      print()
 
@@ -48,9 +47,39 @@ print('\n')
 
 # For loop for the star like shape of numbers
 
-for i in range(1, 6):
-     for j in range(1, i + 1):
+for i in range(1,6):
+     for j in range(1, i + 1): # If we wrote 1,i then it will be 1,5 which means it will go to 4 only but we want 5 as well so we hv to write i + 1
           print(j,end= " ")
      print()
 
 print('\n')
+
+
+
+
+
+
+# Making F shape with nested loops
+
+numbers = [5,2,5,2,2]
+for x_count in numbers:
+     output = ''
+     for count in range(x_count):
+          output +='x'
+     print(output)
+print('\n')
+
+
+
+
+
+
+
+# Making L shape with nested loops
+
+numbers = [2,2,2,2,5]
+for x_count in numbers:
+     output=''
+     for count in range(x_count):
+          output+='x'
+     print(output)
