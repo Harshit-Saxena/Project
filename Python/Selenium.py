@@ -7,6 +7,25 @@ import time
 import os
 import wget
 
+# / TODO:
+# * Import chromedriver after downloading by entering its location  (line 16)
+# * Specify the url of the site you want to launch. In this case it instagram (line 20)
+# * Make variables for username and password and check their html tag name in inspect mode (line 23-26)
+# * send_keys using the variables for the data to be entered (line 31-32)
+# * Variable created to auto click login button (line 38)
+# * Variable created to auto click Not Now on pop ups (line 41-44)
+# * Variable to select the searchBox (line 49)
+# * Keyword to be entered into the searchBox (line 55)
+# * Keyword [0:] to click the 0th index option to be clicked and loaded (line 60)
+# * execute_script to scroll down from 0 to X (line 68)
+# * Find the elements of tag 'img' (line 71)
+# * Get their attribute 'src' (line 72)
+# * Create a path and directory (line 74-79)
+# * For loop to loop through all the img in images and download them onto system (line 83)
+
+
+
+
 driver = webdriver.Chrome('C:/Users/pulki/Downloads/chromedriver.exe')
 
 # * open the webpage
@@ -31,7 +50,6 @@ button = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CSS_SELE
 not_now = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//button[contains(text(),'Not Now')]"))).click()
 
 # * Pop up 2
-
 not_now2 = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//button[contains(text(),'Not Now')]"))).click()
 
 # * Auto clicking search box
@@ -39,31 +57,34 @@ not_now2 = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH,
 searchbox = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//input[@placeholder='Search']")))
 searchbox.clear()
 
-# * search for the hashtag cat
+# * Search for anything with exact username
 
-keyword = "#dog"
+keyword = "dog"
 searchbox.send_keys(keyword)
 
 # * Fixing the double enter prob
+time.sleep(2)
+link = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//a[contains(@href, '/" + keyword[0:] + "/')]")))
 
-link = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//a[contains(@href, '/" + keyword[1:] + "/')]")))
+# ? keyword [1:] shouldnt be used cz when we put the exact username it will be the 0th index and we skip it by the keywrd[1:]...I did it on my own and figured that it needs to be keyword [0:] to open anyone page if you know the exact username
 link.click()
 
 time.sleep(5)
-driver.execute_script("window.scrollTo(0,4000);")
+driver.execute_script("window.scrollTo(0,5000);")
 
-time.sleep(5)
+time.sleep(2)
 images = driver.find_elements_by_tag_name('img')
 images = [image.get_attribute('src') for image in images]
 
 path = os.getcwd()
-path = os.path.join(path, keyword[1:] + "s")
+path = os.path.join(path, keyword[0:] + "-")
+
+# ? It has to be keyword [0:] so that whn it makes the folder it doesnt exclude the 1st letter 
 
 os.mkdir(path)
-path
 
 counter = 0 
 for image in images:
-    save_as = os.path.join(path, keyword[1:] + str(counter) + ".jpg")
-    wget.download(image, save_as)
+    save_as = os.path.join(path, keyword[0:] + str(counter) + ".jpg")  # counter needs to be typecasted into str for it to be concatenated 
+    wget.download(image, save_as)  # image is each img at every index in images
     counter += 1
