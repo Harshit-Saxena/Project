@@ -8,6 +8,7 @@ import os
 import wget
 
 # / TODO:
+
 # * Import chromedriver after downloading by entering its location  (line 16)
 # * Specify the url of the site you want to launch. In this case it instagram (line 20)
 # * Make variables for username and password and check their html tag name in inspect mode (line 23-26)
@@ -38,12 +39,10 @@ password = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CSS_SE
 password.clear()
 
 # * Sending the username and password to be entered
-
 username.send_keys("_pulkit_saxena_")
 password.send_keys("akkuakku")
 
 # * Auto clicking login button
-
 button = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "button[type='submit']"))).click()
 
 # * Pop up 1
@@ -53,21 +52,18 @@ not_now = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, 
 not_now2 = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//button[contains(text(),'Not Now')]"))).click()
 
 # * Auto clicking search box
-
 searchbox = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//input[@placeholder='Search']")))
 searchbox.clear()
 
 # * Search for anything with exact username
-
-keyword = "dog"
+keyword = input("Enter the exact username or name to search : ")
 searchbox.send_keys(keyword)
 
 # * Fixing the double enter prob
 time.sleep(2)
-link = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//a[contains(@href, '/" + keyword[0:] + "/')]")))
+link = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//a[contains(@href, '/" + keyword[0:] + "/')]"))).click()
 
 # ? keyword [1:] shouldnt be used cz when we put the exact username it will be the 0th index and we skip it by the keywrd[1:]...I did it on my own and figured that it needs to be keyword [0:] to open anyone page if you know the exact username
-link.click()
 
 time.sleep(5)
 driver.execute_script("window.scrollTo(0,5000);")
@@ -83,8 +79,8 @@ path = os.path.join(path, keyword[0:] + "-")
 
 os.mkdir(path)
 
-counter = 0 
+counter = 0    
 for image in images:
-    save_as = os.path.join(path, keyword[0:] + str(counter) + ".jpg")  # counter needs to be typecasted into str for it to be concatenated 
-    wget.download(image, save_as)  # image is each img at every index in images
+    save_as = os.path.join(path, keyword[0:] + str(counter) + ".jpg")  # This is us naming the individual files in the folder like dog 0 dog 1 dog 2....counter needs to be typecasted into str for it to be concatenated 
+    wget.download(image, save_as)  # image is each img at every index in images and we want to download every image with the name in save_as
     counter += 1
