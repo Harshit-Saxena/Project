@@ -46,6 +46,7 @@ print()
  # * ---------------------------------------------------------------------------- #
 
 countries.sort()
+
 # print(countries)  This will print it in form of list
 
 print(f"Countries in an alphabetical order")
