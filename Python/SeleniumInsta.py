@@ -7,7 +7,7 @@ import time
 import os
 import wget
 
-# / TODO:
+# TODO:
 
 # * Import chromedriver after downloading by entering its location  (line 16)
 # * Specify the url of the site you want to launch. In this case it instagram (line 20)
@@ -40,7 +40,7 @@ password.clear()
 
 # * Sending the username and password to be entered
 username.send_keys("_pulkit_saxena_")
-password.send_keys("akkuakku")
+password.send_keys("akkuakku1")
 
 # * Auto clicking login button
 button = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "button[type='submit']"))).click()
