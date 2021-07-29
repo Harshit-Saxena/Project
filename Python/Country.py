@@ -33,11 +33,11 @@ print()
 # * ---------------------------------------------------------------------------- #
 
 max_len = 0
-for name in countries: 
+for name in countries:
     if(len(name) > max_len): 
         max_len = len(name)
         longest_name = name
-print(f"The country with the maximum character is: {longest_name}")
+print(f"{longest_name} is the country with { max_len } characters")
 print()
 
 
@@ -47,7 +47,7 @@ print()
 
 countries.sort()
 
-# print(countries)  This will print it in form of list
+# print (countries)  This will print it in form of list
 
 print(f"Countries in an alphabetical order")
 for name in countries: # * This will print each name seprately 

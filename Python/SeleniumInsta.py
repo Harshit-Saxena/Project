@@ -31,7 +31,8 @@ driver = webdriver.Chrome('C:/Users/pulki/Downloads/chromedriver.exe')
 
 # * open the webpage
 
-driver.get("http://www.instagram.com")
+url = "http://www.instagram.com"
+driver.get(url)
 
 username = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CSS_SELECTOR,"input[name='username']")))
 username.clear()
