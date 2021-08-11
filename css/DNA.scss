@@ -7,7 +7,7 @@
  $speed: 15s; 
  
  body {
-     background-color: rgb(3, 3, 3);
+     background-color: #111;
      color: #fff;
      min-height: 100vh;
      display: flex;
@@ -27,9 +27,9 @@
  .link {
      margin: 1em auto;
      width: 10em;
-     aspect-ratio: 1 / 0.1; /* Here height was 1em but I chngd it to 0.1 cz 1em is 0.1 of 10em */
+     height: 1em;
      transform-style: preserve-3d; // Very imp !!!...Without this they all look 2D 
-     animation: linkY $speed linear infinite;
+     animation: linkY $speed infinite linear;
      animation-delay: var(--iad); //Created a variable here
      
      @for $i from 0 to 24 { /* This is for the DNA strand to look like DNA...without this it looks like a ladder (straight) */
@@ -73,7 +73,7 @@
          position: absolute;
          top: -0.5em;
          width: 2em;
-         aspect-ratio: 1 / 1;
+         height: 2em;
          border-radius: 50%; /* Makes the balls round */
          animation: linkY $speed infinite linear reverse;
          animation-delay: inherit;

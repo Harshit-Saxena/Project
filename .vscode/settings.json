@@ -3,6 +3,5 @@
     "cSpell.ignoreWords": [
         "pulkit"
     ],
-    "compile-hero.disable-compile-files-on-did-save-code": false,
-    "C_Cpp.errorSquiggles": "Enabled"
+    "compile-hero.disable-compile-files-on-did-save-code": false
 }

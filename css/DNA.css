@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #030303;
+  background-color: #111;
   color: #fff;
   min-height: 100vh;
   display: -webkit-box;
@@ -35,12 +35,11 @@ body {
 .link {
   margin: 1em auto;
   width: 10em;
-  aspect-ratio: 1 / 0.1;
-  /* Here height was 1em but I chngd it to 0.1 cz 1em is 0.1 of 10em */
+  height: 1em;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-  -webkit-animation: linkY 15s linear infinite;
-          animation: linkY 15s linear infinite;
+  -webkit-animation: linkY 15s infinite linear;
+          animation: linkY 15s infinite linear;
   -webkit-animation-delay: var(--iad);
           animation-delay: var(--iad);
   /* This is for the DNA strand to look like DNA...without this it looks like a ladder (straight) */
@@ -261,7 +260,7 @@ body {
   position: absolute;
   top: -0.5em;
   width: 2em;
-  aspect-ratio: 1 / 1;
+  height: 2em;
   border-radius: 50%;
   /* Makes the balls round */
   animation: linkY 15s infinite linear reverse;
